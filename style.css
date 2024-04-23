@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0A1D56;
+    box-sizing: border-box;
+}
+#container{
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+body{
+    background-color: #37B5B6;;
+}
+#character-container{
+    margin: 0 auto;
+    width: 500px;
+    /* só um default pra centralização */
+}
+img{
+    /*background-color: #F2F597;*/
+    max-height: 420px;
+}
+#photoFigure{
+    text-align: center;
+}
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+figure div{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+figure p{
+    background-color: #f2f597;
+    color: #0A1D56;
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #0A1D56;
+    border-bottom: .5rem solid #0A1D56;
+    font-weight: bold;
+}
+#alternatives{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+#info-serie p{
+    text-indent: 4rem;
+    margin: 1rem 4rem;
+    text-align: justify;
+}
+#info-serie h1{
+    text-align: center;
+    margin: 1rem 4rem;
+}
+#info-serie h2, #info-serie ul{
+    margin: 1rem 4rem;
+}
+.occupation{
+    text-align: center;
+    width: 100%;
+    background-color: #f2f597;
+    font-weight: bold;
+    padding: 4px;
+    border-top: 1px solid #0A1D56;
+}
+.group{
+   display: flex;
+   justify-content: center;
+   /*padding: 0 1rem;
+   gap: 2rem; */
+}
+.group p{
+    text-align: center;
+    width: 50%;
+    background-color: #f2f597;
+    font-weight: bold;
+    padding: 3px;
+}
+#character-container h2, p.header-info{
+    text-align: center;
+    margin: .5rem 0;
+}
+#character-container select{
+    padding: 5px;
+    background-color: #f2f597;
+    color: #0A1D56;
+    width: 200px;
+    margin: 1rem 125px 0;
+    outline: none;
+    border: 1px solid #0A1D56;
+}
+#info{
+    border: 1px solid #0A1D56;
+}
+.group p:first-child{
+    border-right: 1px solid #0A1D56;
+}
+ul{
+  display: flex;  
+  flex-direction: column;
+  gap: .5rem;
+}
+
+ul a{
+    margin-left: .1rem;
+    text-decoration: none;
+    color: #f2f597;
+    opacity: .8;
+    display: flex;    
+}
+
+ul a:hover{
+    opacity: 1;
+    color: #0A1D56;
+}
+
+#quote-speech{
+    background: url(/assets/caixa-de-texto.png) no-repeat;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .75rem;
+    align-self: start;
+}
+#quote{
+    width: 100%;
+    height: 112px;
+    background-color: #f2f597;
+    text-align: justify;
+    font-size: 12px;
+    padding: .2rem .5rem;
+}
+
+#triangle{
+    border-bottom: 24px solid transparent;
+    border-left: 26px solid #f2f597;
+    margin-right: 114px;
+    height: 0;
+}
+/*Eu vou fazer manualmente um balão via css, para isso usarei um triangulo e uma div normal, só explicando como funciona o triangulo do css iamgine uma div box com 4 bordas, cada canto dessa borda forma um triangulo,
+logo se a div tiver tamanho de 0 e as outras bordas forem transparentes a que sobrar formará um triângulo */
+/* 
+triangulo{
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid blue;
+} esse faria um triangulo invertido para a direita
+*/
+
+/*Estilização do quiz*/
+#question-container{
+    border: 1px solid #f2f597;
+    width: 800px;
+    min-height: 600px;
+    margin: 1.5rem auto;
+    background-color: #0A1D56;
+    border-radius: 5%;
+    padding:1rem 0; /*1rem pra cima e pra baixo e 0 nas laterais*/
+}
+
+.question-header, #question-container h3{
+    color: #f2f597;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 1.5rem;
+}
+#question-container h3{
+    margin-top: 3rem;
+    font-size: 36px;
+}
+
+.option-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    background-color: #f2f597;
+    color: #0A1D56;
+    padding: 1.8rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    border: 3px solid transparent;/*Uma maneira da borda do elemento se alterar sem que modifique o tamanho, a borda existe só que ela não é visivel*/
+    outline: 1px solid transparent;
+}
+/*Aparente não é possível estilizar o próprio input que já vem do html, mas dá pra setar a aparencia como none e estilizar um "novo"*/
+.option-container input[type="radio"]{
+    appearance: none; 
+    cursor: pointer;
+    border: 1.6px solid #0A1D56; 
+    outline: none;
+    padding: .8rem;   
+    border-radius: 50%;
+    background-color: #f2f597;
+    max-height: 28px;
+}
+.option-container span{
+    font-weight: bold;
+    font-size: 24px;
+    margin: auto;
+}
+
+.selected{
+    /* 
+    appearance: none;
+    cursor: pointer;
+    border: .1rem solid #f2f597;
+    outline: 1px solid #0A1D56;
+    padding: .5rem;   
+    border-radius: 50%;
+    background-color: #0A1D56;
+    */
+}
+
+button#next, button#restart-button, button#back{
+    margin: .5rem 0 1rem;
+    margin-left: 80%;
+    padding: 1rem;
+    background-color: #45FFCA;
+    outline: none;
+    opacity: .8;
+    color: #0A1D56;
+    outline: 1px solid #f2f597;;
+    border: 1px solid #0A1D56;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button#next:hover{
+    opacity: 1;
+}
+
+span#num-question{
+    color: #f2f597;
+    font-weight: bold;
+    font-size: 24px;
+    /*margin-bottom: 1rem;/*Tags do tipo span só podem ser alinhadas horizontalmente*/
+    margin-left: 5rem;
+}
+
+#question-container div:first-child{
+    margin-top: 1rem;
+}
+
+/*Estilização do bloco que leva ao quiz*/
+
+#quiz-info-container{
+    /* display: flex; */
+    padding: 1rem 1rem 3rem;
+    margin: 6rem auto;
+    background-color: #f2f597; 
+    width: 400px;
+    border: 2px dashed #0A1D56;
+    height: 200px;
+}
+
+#quiz-info-container p{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#quiz-info-container a{
+    margin-left: 2rem;
+    padding: 2rem;
+    text-decoration: none;
+    color: #0A1D56;
+    border: 2px solid #0A1D56;
+    background-color: #45FFCA;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#quiz-info-container img{
+    max-width: 64px;
+}
+#clique{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#restart-button, button#back{
+    display: none; 
+}
+button#back a{
+    text-decoration: none;
+}
+/*Container da resposta*/
+#res-container{
+    margin: 1rem;  
+    text-align: center;
+}
+#res-container div{
+    margin: 200px;
+    display: flex;
+    width: 100px;
+}
