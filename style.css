@@ -312,10 +312,6 @@ button#back a{
 }
 
 @media (max-width: 450px ){
-    *{
-        max-width: 400px;
-    }
-
     #info-serie p{
         max-width: 450px;
     }
@@ -386,5 +382,47 @@ button#back a{
     }
     #character-container select{
         margin: 0 100px;
+    }
+
+    #question-container{
+        background: none;
+        max-width: 390px;
+        max-height: 720px;
+        padding: 1rem;
+        margin: 0;
+        border: none;
+    }
+
+    #question-container h2{
+        color: #0A1D56;
+        font-weight: bold;
+        font-size: 20px;
+        border: 2px solid #0A1D56;
+        /*border-radius: 1%;*/
+        margin-bottom: 1rem;
+    }
+
+    div#alternatives{
+        display: flex;
+        gap: .3rem;
+    }
+
+    .option-container{
+        margin: 0 auto;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .option-container span{
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    button#next{
+        margin: 1rem auto;
+        width: 100px;
     }
 }
