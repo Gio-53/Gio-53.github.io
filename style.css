@@ -419,9 +419,10 @@ button#back a{
     }
 
     .option-container span{
-        margin: 0 auto;
-        font-size: 18px;
+        /*margin: 0 auto;*/
+        font-size: 1px;
         font-weight: bold;
+        margin-left: 12px;
     }
 
     button#next, button#back, button#restart{
