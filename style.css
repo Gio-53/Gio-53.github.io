@@ -314,6 +314,7 @@ button#back a{
 @media (max-width: 450px ){
     #info-serie p{
         max-width: 450px;
+        max-height: 720px;
     }
     #img-cont{
         width: 70%;
@@ -391,6 +392,8 @@ button#back a{
         padding: 1rem;
         margin: 0;
         border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #0A1D56;
     }
 
     #question-container h2{
@@ -417,12 +420,23 @@ button#back a{
 
     .option-container span{
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
     }
 
+    button#next, button#back, button#restart{
+        width: 100px;
+        margin: 0;
+    }
     button#next{
         margin: 1rem auto;
-        width: 100px;
+    }
+    
+    div#btn-container{
+        width: 150px;
+        margin: 3rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
